@@ -1,0 +1,32 @@
+.intro{
+    min-width: 200px;
+}
+.prof{
+    font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--body-color)
+}
+.name{
+    font-family: "Shadows Into Light", cursive;
+    font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--body-color)
+}
+/* .profTitle {
+    animation-name: alternating-text;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes alternating-text {
+    90% {
+      display: none;
+    }
+  } */
+  Typewriter{
+    display: inline;
+  }

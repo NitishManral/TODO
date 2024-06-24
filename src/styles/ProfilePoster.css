@@ -1,0 +1,59 @@
+.posterContainer{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+.picContainer{
+  position: relative;
+  z-index: 4;
+
+  height: 250px;
+  width: 200px;
+  overflow: hidden; /* Ensures no part of the image spills out */
+  animation: changeBorderRadiusParent 3s infinite alternate;
+}
+
+.profilePic{
+
+    /* object-fit: contain; */
+    z-index: 3;
+    object-fit: fill; /* This will ensure the image is scaled to be as large as possible without cropping or stretching */
+  height: 100%;
+  width: 100%;
+  padding-bottom: 0; 
+  position: absolute;
+  bottom: 0;
+  filter: drop-shadow(20px 20px 10px rgba(2, 2, 2, 1)); /* Adds shadow around the image */
+
+}
+
+.prop{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: blue;
+  z-index: 1;
+  animation: changeBorderRadius 3s infinite alternate;
+}
+@keyframes changeBorderRadius {
+  from {
+    border-radius: 300% 100% 50% 50%;
+  }
+  to {
+    border-radius: 100% 300% 50% 50%;
+  }
+}
+@keyframes changeBorderRadiusParent {
+  from {
+    border-radius: 50% 50% 300% 100%;
+  }
+  to {
+    border-radius: 50% 50% 100% 300%;
+  }
+}

@@ -1,6 +1,5 @@
 import { configureStore, createSlice, nanoid } from '@reduxjs/toolkit';
 
-// Helper function to load todos from local storage
 const loadTodosFromLocalStorage = () => {
   try {
     const serializedTodos = localStorage.getItem('todos');
@@ -11,7 +10,6 @@ const loadTodosFromLocalStorage = () => {
   }
 };
 
-// Helper function to save todos to local storage
 const saveTodosToLocalStorage = (todos) => {
   try {
     const serializedTodos = JSON.stringify(todos);
@@ -27,7 +25,7 @@ const createDummyTodos = () => {
     const descriptionLength = Math.floor(Math.random() * (100 - 10 + 1)) + 10; // Random length between 10 and 100
     const description = `Description for Todo ${i} `.repeat(descriptionLength).slice(0, descriptionLength);
     dummyTodos.push({
-      id: i, // Assuming a simple numeric ID for dummy data
+      id: i, 
       title: `Todo ${i}`,
       description: description,
       state: false
@@ -41,7 +39,6 @@ const initialState = {
   searchTerm: ''
 };
 
-// Create a slice for todos with reducers to handle adding, toggling, deleting, and editing todos
 const todosSlice = createSlice({
   name: 'todos',
   initialState,
@@ -90,25 +87,22 @@ const todosSlice = createSlice({
 
 // Corrected selector
 export const selectFilteredTodos = (state) => {
-  const todos = state.todos.todos; // Access the todos array inside the todos slice
-  const searchTerm = state.todos.searchTerm; // Access the searchTerm inside the todos slice
+  const todos = state.todos.todos; 
+  const searchTerm = state.todos.searchTerm;
   if (!searchTerm) return todos;
   return todos.filter(todo =>
     todo.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 };
 
-// Export the action creators
 export const { addTodo, toggleTodoState, deleteTodo, editTodo, setSearchTerm } = todosSlice.actions;
 
-// Configure the Redux store with the updated todos slice reducer
 const store = configureStore({
   reducer: {
     todos: todosSlice.reducer
   }
 });
 
-// Subscribe to store updates and save the state to local storage
 store.subscribe(() => {
   saveTodosToLocalStorage(store.getState().todos.todos);
 });

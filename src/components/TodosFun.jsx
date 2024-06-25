@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react'; // Import useState
-import { useDispatch, useSelector } from 'react-redux'; // Import hooks from react-redux
-import {  setSearchTerm, selectFilteredTodos } from '../app/store'; // Adjust the import path as necessary
+import React, { useEffect, useState } from 'react'; 
+import { useDispatch, useSelector } from 'react-redux';
+import {  setSearchTerm, selectFilteredTodos } from '../app/store';
 import '../styles/TodosFun.css';
 import TodoCard  from './TodoCards';
 const TodosFun = () => {
     const dispatch = useDispatch();
     const [search, setSearch] = useState('');
-    // Correctly pass the entire state to the selector
     const filteredTodos = useSelector(state => selectFilteredTodos(state));
     const [isLoading, setIsLoading] = useState(true);
     useEffect(() => {
         dispatch(setSearchTerm(search));
         console.log(filteredTodos);
-    }, [search, dispatch, filteredTodos]); // Add filteredTodos to the dependency array to re-run the effect when it changes
+    }, [search, dispatch, filteredTodos]); 
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { editTodo } from '../app/store'; 
 import "../styles/AddTodo.css";
-
+import {ReactComponent as Cross} from '../assets/cross.svg';
 const EditTodo = ({ todoToEdit = null, onClose = () => {} }) => {
     const [isModalOpen, setIsModalOpen] = useState(true); 
     const [title, setTitle] = useState('');
@@ -34,7 +34,7 @@ const EditTodo = ({ todoToEdit = null, onClose = () => {} }) => {
     return (
         <div className="modal">
             <div className="modalContent">
-                <span className="close" onClick={onClose}>&times;</span>
+                <Cross className="close" onClick={onClose}/>
                 <input 
                     className='titleInput' 
                     type="text" 

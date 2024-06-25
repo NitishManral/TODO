@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addTodo } from '../app/store'; // Adjust the import path according to your project structure
+import { addTodo } from '../app/store'; 
 import "../styles/AddTodo.css";
-
+import {ReactComponent as Cross} from '../assets/cross.svg';
 const AddTodo = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [title, setTitle] = useState('');
@@ -34,7 +34,7 @@ const AddTodo = () => {
             {isModalOpen && (
                 <div className="modal">
                     <div className="modalContent">
-                        <span className="close" onClick={toggleModal}>&times;</span>
+                        <Cross className="close" onClick={toggleModal}/>
                         <input 
                             className='titleInput' 
                             type="text" 

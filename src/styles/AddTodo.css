@@ -30,11 +30,13 @@
 }
 
 .modalContent {
+
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #fefefe;
+    background-color: #ffffff;
+    /* backdrop-filter: blur(10px); */
     
     padding:20px;
     padding-top: 30px;
@@ -42,13 +44,19 @@
     height: 300px;
     border-radius: 10px;
 }
-
+.modalContent>*{
+    font-family: "Playwrite DE Grund", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 .close {
     position: absolute;
     top: 0;
     right: 0;
     height: 30px;
     width: 30px;
+    margin: 0;
+    padding: 0;
     color: #aaa;
     float: right;
     font-size: 30px;
@@ -66,6 +74,7 @@
     font-size: 20px;
     margin-bottom: 10px;
     border-radius: 5px;
+    font-style: bold;
 }
 .desInput{
     width: 100%;

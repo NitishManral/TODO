@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-// import Moon from "../assets/Moon.svg";
-// import Sun from "../assets/Sun.svg"
-
 import { ReactComponent as Sun } from "../assets/Sun.svg";
 import { ReactComponent as Moon } from "../assets/Moon.svg";
 import "../styles/DarkMode.css";

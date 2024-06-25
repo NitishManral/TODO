@@ -36,7 +36,9 @@ const TodoCard = ({ todo }) => {
             {isEditTodoOpen && <EditTodo isEditMode={true} key={todo.key} todoToEdit={todoToEdit} onClose={() => setisEditTodoOpen(false)} />}        
 
             <div className='todoCard' style={cardStyle}>
-            <h3 className='todoTitle'>{todo.title}</h3>
+            <h3 className={`todoTitle ${todo.state ? 'completed' : ''}`}>
+                {todo.title}
+            </h3>
             <p className='todoDescription'>{todo.description}</p>
             <input
                 className='isDone'

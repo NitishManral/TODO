@@ -1,0 +1,116 @@
+.todoCard{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(40, 0, 50, 1); /* Horizontal offset, Vertical offset, Blur radius, Color */
+    color: white;
+    z-index: 9;
+}
+
+.todoCard:hover .trashIcon {
+    opacity: 1; 
+    pointer-events: auto; 
+}
+.todoCard>*{
+    margin: 0;
+}
+.todoTitle{
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+
+}
+.todoDescription{
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+    text-wrap: wrap;
+}
+.todoTitle, .todoDescription {
+    /* white-space: nowrap;  */
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+.todoCard input[type="checkbox"] {
+    appearance: none; 
+    -webkit-appearance: none; 
+    -moz-appearance: none; 
+    position: absolute;
+    top: -10px; 
+    right: -10px; 
+    width: 25px; 
+    height:25px; 
+    border-radius: 50%; 
+    cursor: pointer; 
+    border: 2px solid var(--body-color);
+    transition: background-color 0.3s ease; 
+}
+
+.todoCard input[type="checkbox"]:checked {
+    background-image: linear-gradient(to center, #007bff, #003580); 
+
+}
+.isDone:hover , .editIcon:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.isDone:active , .editIcon:active {
+    transform: scale(0.95); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+.todoCard input[type="checkbox"]:checked:after {
+    content: '✓'; 
+    color: white; 
+    display: block;
+    text-align: center;
+    line-height: 20px; 
+}
+.todoCard .isDone {
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.3s ease; 
+}
+
+.todoCard:hover .isDone {
+    opacity: 1;
+    pointer-events: auto; 
+}
+.editIcon{
+    position: absolute;
+    bottom:  -10px;
+    right: -10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--body-color);
+    border-radius: 50%;
+    opacity: 0;
+    padding: 5px;
+}
+.todoCard:hover .editIcon, .trashIcon {
+    opacity: 1; 
+    pointer-events: auto; 
+}
+.trashIcon{
+    position: absolute;
+    /* top: -10px; */
+    left: -10px;
+    bottom: -10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 20px;
+    width: 20px;
+    border: 2px solid var(--body-color);
+    border-radius: 50%;
+    opacity: 0;
+    padding: 5px;
+}

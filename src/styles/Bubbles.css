@@ -1,0 +1,20 @@
+.bubble {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border:1px solid;
+    border-radius: 50%;
+    animation: float 5s ease-out infinite;
+    z-index: 1; 
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100vh);
+    }
+  }

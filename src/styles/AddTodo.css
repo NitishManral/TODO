@@ -1,0 +1,81 @@
+.addTodo{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    right: 50px;
+    bottom: 50px;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: #3096c5;
+    border: 0;
+    color: var(--body-background);
+    z-index: 10;
+}
+.modal {
+    position: fixed;
+    z-index:11;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: none;
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modalContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 30px 20px 20px 20px;
+    border: 1px solid #888;
+    width: 400px;
+    height: auto;
+
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 30px;
+    width: 30px;
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.titleInput{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.desInput{
+    width: 100%;
+    height: 200px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+.createTodoBtn{
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: #3096c5;
+    color: var(--body-background);
+    border: 0;
+    cursor: pointer;
+}

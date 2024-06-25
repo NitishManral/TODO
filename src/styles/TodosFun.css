@@ -1,0 +1,57 @@
+.todosFun{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 100vw;
+    z-index: 5;
+}
+.todoListContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+  margin-top: 10px;
+}
+.searchBar{
+    height: 50px;
+    width: 300px;
+    border-radius: 5px;
+    border: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    color: var(--body-color);
+}
+.noTodos{
+    color: var(--body-color);
+}
+.loader {
+    width: 30px;
+    aspect-ratio: 1;
+    display: grid;
+    border-radius: 50%;
+    background: conic-gradient(#25b09b 25%,#f03355 0 50%,#514b82 0 75%,#ffa516 0);
+    animation: l22 2s infinite linear;
+  }
+  .loader::before,
+  .loader::after {
+     content: "";
+     grid-area: 1/1;
+     margin: 15%;
+     border-radius: 50%;
+     background: inherit;
+     animation: inherit;
+  }
+  .loader::after {
+     margin: 25%;
+     animation-duration: 3s;
+  }
+  @keyframes l22 {
+    100% {transform: rotate(1turn)}
+  }
+

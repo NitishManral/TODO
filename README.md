@@ -1,5 +1,5 @@
 # Todo List Application
-### This project is a simple Todo List application built with React.js, Redux, and vanilla CSS, bootstrapped with Vite. The application allows users to add, toggle, edit, and delete todos, with data persistence using local storage.
+#### This project is a simple Todo List application built with React.js, Redux, and vanilla CSS, bootstrapped with Vite. The application allows users to add, toggle, edit, and delete todos, with data persistence using local storage.
 
 ## Features
 - Add new todos with a title and description

@@ -49,7 +49,7 @@ const AddTodo = () => {
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                         ></textarea>                        
-                        <button className='createTodoBtn' onClick={handleCreate}>Create TODO</button>
+                        <button className='createTodoBtn' onClick={handleCreate}>Create</button>
                     </div>
                 </div>
             )}

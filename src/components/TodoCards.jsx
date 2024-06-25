@@ -32,7 +32,10 @@ const TodoCard = ({ todo }) => {
     };
 
     return (
-        <div className='todoCard' style={cardStyle}>
+        <>
+            {isEditTodoOpen && <EditTodo isEditMode={true} key={todo.key} todoToEdit={todoToEdit} onClose={() => setisEditTodoOpen(false)} />}        
+
+            <div className='todoCard' style={cardStyle}>
             <h3 className='todoTitle'>{todo.title}</h3>
             <p className='todoDescription'>{todo.description}</p>
             <input
@@ -44,9 +47,10 @@ const TodoCard = ({ todo }) => {
             />
             <Trash className='trashIcon' onClick={() => dispatch(deleteTodo(todo.id))} style={cardStyle}/>
             <Edit className='editIcon' onClick={() => handleEdit(todo)} style={cardStyle}/>
-            {isEditTodoOpen && <EditTodo isEditMode={true} key={todo.key} todoToEdit={todoToEdit} onClose={() => setisEditTodoOpen(false)} />}        
             
-        </div>
+            </div>
+        </>
+        
     );
 };
 

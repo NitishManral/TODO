@@ -50,7 +50,7 @@ const EditTodo = ({ todoToEdit = null, onClose = () => {} }) => {
                     onChange={(e) => setDescription(e.target.value)}
                 ></textarea>                        
                 <button className='createTodoBtn' onClick={handleUpdate}>
-                    Update TODO
+                    Update
                 </button>
             </div>
         </div>

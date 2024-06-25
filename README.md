@@ -57,7 +57,7 @@ The application should now be running on http://localhost:5173 (default Vite por
 
 
 ## Contact
-Your Name - nitishmanral9@gmail.com
+Name - Nitish Manral
+Email- nitishmanral9@gmail.com
 
-Project Link: https://github.com/yourusername/todo-list-app
 
